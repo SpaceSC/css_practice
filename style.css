@@ -15,11 +15,58 @@ body {
   padding: 10px;
 }
 
-#white {
-  width: 500px;
-  min-height: 500px;
+#oneDiv {
   height: 100%;
+  width: 500px;
+  /*margin: 10px; ez nem érvényesül, de miért */
   border: 2px solid #00a99d;
   border-radius: 20px;
   background-color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .twoDivs {
+    position: relative;
+  
+    border: 2px solid #00a99d;
+    border-radius: 20px;
+    background-color: white;
+  }
+}
+
+.twoDivs {
+  position: relative;
+  width: 40vw;
+  height: 40vw;
+  max-width: 500px;
+  max-height: 500px;
+  border: 2px solid #00a99d;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.other {
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  color: #888888;
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  box-shadow:  5px 2px 8px 4px #888888;
+  text-decoration: none;
+  padding: .6%;
 }
