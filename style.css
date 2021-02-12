@@ -29,22 +29,9 @@ body {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  height: 100%;
-  width: 100%;
-}
-
-@media screen and (max-width: 600px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .twoDivs {
-    position: relative;
-  
-    border: 2px solid #00a99d;
-    border-radius: 20px;
-    background-color: white;
-  }
+  height: 100vh;
+  width: 100vw;
+  border: none;
 }
 
 .twoDivs {
@@ -58,8 +45,25 @@ body {
   background-color: white;
 }
 
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .twoDivs {
+    position: relative;
+    height: calc(100vw - 20px);
+    width: calc(100vw - 20px);
+    border: 2px solid #00a99d;
+    border-radius: 20px;
+    background-color: white;
+  }
+}
+
 .other {
   position: fixed;
+  z-index: 2;
   top: 2%;
   right: 2%;
   color: #888888;
